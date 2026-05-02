@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Mission Cultural Day – Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- School logo embedded as base64 so it works offline -->
+  <script>
+    const SCHOOL_LOGO = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAMAAABY1h8eAAAA3lBMVEVHcExOUGUcI0otM1WJhIEnLlKQjIpITGGJh4eKiIiy0P+NiokvMkMvNVUcJEwqM19JTGU0PFwoLlI2O1kXIk6KiojE3OpdZ4YwNlc3O1k3PVvT5sFvb3dlaHBVXnmNi4p+foGRjYtIV4BoeaO11P9WZIttf6uvzP/C2eB9fIC10f9MVXXN4MiKhYKAgpJWY4muyf7Q4r+xzf8pL1FJTGVeYXeIippoeJ/K39OSmKefuOp2ibl4eoyboqrW57JrboFicJZxg62mr7Y+WsF7n/+Loc+SqdyDl8OJnss6RG9YTjtKAAAAKnRSTlMA5uY7yeD+rHe4wtQJtJv92eBsniEv+ckTffDFnOGjSl/EvcLC3t7b3I6yf2w+AAABG0lEQVQokbWO2XKCMBRABQSlrIKCWh2X7kkMEBZZ3R3t//9QMzxYcfLUmZ6Hm4cz5+a2Wv+K3blj1FCCBeMqOcQ4y3BWRdAa3smhERoRjMt4W8I4MsSwUYYT931qclHE9d5eppOwUapyGwDkfHw6DnlddVW18SuVKdoUmwD5z6vuw7VyGwWbqsiCAD0xZBocvvPTni0RKvLT8Zgi9tpz7hv7NGCVxAdXGALfZ0pCgOcBQlgS5IBmgLBKxYOXAsLLGS4llvTWnreD0G1KQeh/Laha73Z0uNK8Lwg3aYsiL/b4Hk/feoiifZPaOMGUZItxuU1wiZOx9rt3pOsax3HmsmPSqem69XDSTJFqFoMWA3WuKIo8Y6maAbP6Az+HeCg9X52p5wAAAABJRU5ErkJggg==";
+  </script>
+</head>
+<body>
+
+  <!-- ===== HERO HEADER ===== -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="mandala mandala-1"></div>
+      <div class="mandala mandala-2"></div>
+      <div class="mandala mandala-3"></div>
+    </div>
+    <div class="hero-content">
+      <img id="heroLogo" class="school-logo" alt="School Logo" />
+      <p class="hero-eyebrow">✦ Annual School Celebration ✦</p>
+      <h1 class="hero-title">World Mission<br/><span>Cultural Day</span></h1>
+      <p class="hero-subtitle">Unite · Celebrate · Inspire</p>
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="register">Register Now</button>
+        <button class="tab-btn" data-tab="participants">Participants</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-wrapper">
+
+    <!-- ==== REGISTRATION TAB ==== -->
+    <section id="tab-register" class="tab-panel active">
+      <div class="form-card">
+        <div class="form-card-header">
+          <span class="form-icon">🌍</span>
+          <h2>Event Registration</h2>
+          <p>Fill in your details to secure your spot</p>
+        </div>
+
+        <form id="registrationForm" novalidate>
+
+          <!-- Row 1: Full Name + Email -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Amara Diallo" autocomplete="name" />
+              <span class="error-msg" id="err-fullName"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <span class="error-msg" id="err-email"></span>
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Gender -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+250 700 000 000" autocomplete="tel" />
+              <span class="error-msg" id="err-phone"></span>
+            </div>
+            <div class="form-group">
+              <label>Gender <span class="req">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="gender" value="Male" /> Male</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Female" /> Female</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Prefer not to say" /> Prefer not to say</label>
+              </div>
+              <span class="error-msg" id="err-gender"></span>
+            </div>
+          </div>
+
+          <!-- Row 3: Country + Participation -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country / Culture Represented <span class="req">*</span></label>
+              <input type="text" id="country" name="country" placeholder="e.g. Rwanda, Japan, Brazil…" />
+              <span class="error-msg" id="err-country"></span>
+            </div>
+            <div class="form-group">
+              <label for="participation">Participation Type <span class="req">*</span></label>
+              <div class="select-wrapper">
+                <select id="participation" name="participation">
+                  <option value="">— Select role —</option>
+                  <option value="Performer">🎭 Performer</option>
+                  <option value="Volunteer">🤝 Teacher</option>
+                  <option value="Attendee">🎟️ Student</option>
+                </select>
+              </div>
+              <span class="error-msg" id="err-participation"></span>
+            </div>
+          </div>
+
+          <!-- Special Requests -->
+          <div class="form-group full-width">
+            <label for="requests">Special Requests <span class="optional">(optional)</span></label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Any dietary needs, accessibility requirements, or other notes…"></textarea>
+          </div>
+
+          <!-- Terms -->
+          <div class="form-group full-width checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="terms" name="terms" />
+              <span class="checkmark"></span>
+              I agree to the <a href="#" class="link">Terms &amp; Conditions</a> and consent to my information being used for event purposes.
+            </label>
+            <span class="error-msg" id="err-terms"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Register for the Event</span>
+            <span class="btn-icon">→</span>
+          </button>
+
+        </form>
+
+        <!-- Success Banner -->
+        <div id="successBanner" class="success-banner hidden">
+          <span class="success-icon">🎉</span>
+          <div>
+            <strong>Registration Successful!</strong>
+            <p>Welcome to World Mission Cultural Day. Check the Participants tab to see your entry.</p>
+          </div>
+          <button class="success-close" id="closeBanner">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== PARTICIPANTS TAB ==== -->
+    <section id="tab-participants" class="tab-panel">
+      <div class="participants-card">
+        <div class="participants-header">
+          <h2>🌐 Registered Participants</h2>
+          <p id="participantCount" class="count-badge">0 registered</p>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="controls-bar">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search by name or country…" />
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Performer">Performers</button>
+            <button class="filter-btn" data-filter="Volunteer">Teachers</button>
+            <button class="filter-btn" data-filter="Attendee">Students</button>
+          </div>
+          <button class="btn-export" id="exportBtn" title="Export as CSV">📥 Export</button>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper">
+          <table id="participantTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Role</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="participantBody">
+              <!-- Rows injected by JS -->
+            </tbody>
+          </table>
+          <div id="emptyState" class="empty-state">
+            <span>🌱</span>
+            <p>No participants yet. Be the first to register!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==== EDIT MODAL ==== -->
+  <div id="editModal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>✏️ Edit Registration</h3>
+      <input type="hidden" id="editId" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="editName" />
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" id="editCountry" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Participation Type</label>
+        <div class="select-wrapper">
+          <select id="editParticipation">
+            <option value="Performer">Performer</option>
+            <option value="Volunteer">Teacher</option>
+            <option value="Attendee">Student</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-cancel" id="cancelEdit">Cancel</button>
+        <button class="btn-save" id="saveEdit">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>🌍 World Mission Cultural Day &nbsp;|&nbsp; Bringing the World to Our School</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
